@@ -7,7 +7,8 @@ make small "hotfixes" to a running machine to fix a critical bug.
 ## Objectives
 * __Create__ an SSH key
 * __Log in__ to a remote server 
-
+* __Copy files__ to a remote server
+* __Review__ a file using tail
 
 ## Introduction
 Servers are just computers. Webservers are often Linux based machines and once you have access you can run 
@@ -30,15 +31,11 @@ cd ~/.ssh
 ssh-keygen -t rsa -C jbarela@generalassemb.ly
 ```
 
-You can then distribute the ``id_rsa.pub`` file to other people like system administrators. The adminsitrators can then add your server access.
+You can then distribute the ``id_rsa.pub`` file to other people like system administrators. The 
+adminsitrators can then add your server access. Never transfer the ``id_rsa`` to someone as this is the same 
+as handing someone a sticky note with your id and password.
 
-
-__ssh gotcha__
-ssh logs you in as a specifc user. Sometimes there's a single user for server, sometimes you log in as 
-yourself. This is often done for logging and permissions. In particular, you may only have read only 
-permissions so you might get some new errors that say you can't run a command because you don't have permissions.
-
-### Independent practice
+#### Independent practice
 Generate your private ssh key 
 
 ### ssh
@@ -50,23 +47,56 @@ ssh <user-name>@<host>
 ```
 
 For our AWS we'll use something slightly different. AWS adds its own private key when the server is used. 
-This private key is what we need to log into the server. 
+This private key is what we need to log into the server. To use the private key we'll need a slighlty different form:
 
-### Independent practice
+```bash
+ssh -i file.pem ec2-user@aws-host
+```
+
+The ``-i`` tells ssh to use the file listed after as the key. One thing that you'll need to do is to make
+sure that the file is read only.
+
+How do you change the file so that only you read the file MyCertificate.pem?
+<details>
+``chmod 400 MyCertificate.pem``
+</details>
+
+__ssh gotcha__
+
+ssh logs you in as a specifc user. Sometimes there's a single user for server, sometimes you log in as 
+yourself. This is often done for logging and permissions. In particular, you may only have read only 
+permissions so you might get some new errors that say you can't run a command because you don't have permissions.
+
+#### Independent practice
 Log into an instance find the ``carmen.sandiego`` file.
 
 ## SCP 
 Since production servers are stripped down machines sometimes you need to transfer files. The easiest way to 
 do this is to use ``scp``.
 
-### Independent practice
+The basic format is:
+```bash
+scp <local_file(s)> <user>@<host>:<remote_local>
+```
+
+For our AWS server we'll need 
+```bash
+scp -i <certificate> <local_file(s)> <user>@<host>:<remote_local>
+```
+
+You can also reverse the system
+```bash
+scp -i <certificate> <user>@<host>:<remote_local> <local_file(s)> 
+```
+
+#### Independent practice
 Create a directory named by your github id inside of the class directory. Inside that directory put a copy of your headshot.
 
 ## Tail
 When you're looking at production logs you can use the ``tail`` command.
 
-### Indpendent Practice 
-Use tail on ``app/logs/app.log`` to find a message for GA students.
+#### Indpendent Practice 
+Use tail on the log file in the app folder to find a message for GA students.
 
 <!-- ## Text Editors
 
