@@ -1,6 +1,6 @@
 # Introduction to Operations 
 
-## Why is this important
+## Why is this important?
 
 Troubleshooting in production often requires you to view logs on a remote machine. You may also be asked to 
 make small "hotfixes" to a running machine to fix a critical bug.
@@ -24,38 +24,34 @@ either looking at local logs or even making small changes and restarting the sys
 ## SSH 
 
 The most common way to access a webserver is to use `ssh` or secure shell. `ssh` uses the same technology as 
-SSL/HTTPS to enable you to access the server over an encrypted connection. Unlike SSL, that does a lot of work
-for you, you need to do some of the heavy lifting around keys with `ssh`.
+SSL/HTTPS to enable you to access the server over an encrypted connection. 
 
-### ssh keys
+Let's start with a quick hello world.  Open up your terminal and connect to my extra laptop with:
 
-Let's start by creating your local ssh keys.
+`ssh wdi-devs@10.62.107.93`
 
-```bash
-cd ~/.ssh
-# Check for id_rsa files
-ls
-# Create a file if it does not exist
-ssh-keygen -t rsa -C zgirouard@generalassemb.ly
-```
+We will tell you the password out loud rather than put it in this repo.  (Security!  Keep that in mind for the future--never put passwords in a publicly accessible place.  Bad people (and robots) are everywhere.)
 
-You can then distribute the ``id_rsa.pub`` file to other people like system administrators. The 
-administrators can then give your server access. Never transfer the ``id_rsa`` to someone as this is the same 
-as handing someone a sticky note with your id and password.
+Want to set this up for your computer so you can log in from other machines on your network at work or home?  [Follow these directions](https://support.apple.com/kb/PH18726?locale=en_US).  Be very careful, though.  Whenever you open access to a machine, you should remember to follow these rules:
 
-#### Independent practice
+1. Have some sort of authentication.  Above, this is your username and password, but there are other methods (like the one below).
+2. Be sure that all the people who could *potentially* reach your computer are trusted.  In the example above, we are trusting all the people on our WeWork network, but the more restricted you can be to specific addresses or networks, the better.
 
-Generate your private ssh key, with your email.  When prompted to add a passphrase, you can leave it blank.  If you want to be super-secure, and add a passphrase, just make sure you remember it!
+### ssh public keys
 
-### ssh
+When possible, it is better to not share usernames or passwords at all.  One way to avoid that is to share public SSH keys that contain neither usernames or passwords in plain text.  Remember installFest?  [We totally did that](https://help.github.com/articles/generating-an-ssh-key/) during [installFest](https://github.com/den-wdi-2/installFest/blob/master/mac-dev-tools.md).
 
-Once your key has been transfered, you can log into the server. The basic format for this is: 
+<!--Raise your hand if you realized that's what you were doing.  -->
+
+Once you have a public key, you can log into a machine with the same format as above: 
 
 ```bash
 ssh <user-name>@<host>
 ```
 
-For our AWS we'll use something slightly different. AWS adds its own private key when the server is used. 
+### ssh private keys
+
+For AWS, we'll use something slightly different. AWS adds its own private key when a server is created. 
 This private key is what we need to log into the server. To use the private key we'll need a slighlty different form:
 
 ```bash
@@ -72,12 +68,14 @@ How do you change the file so that only you read the file MyCertificate.pem?
 
 __ssh gotcha__
 
-ssh logs you in as a specifc user. Sometimes there's a single user for server, sometimes you log in as 
+ssh logs you in as a specifc user. Sometimes there's a single user for a server, sometimes you log in as 
 yourself. This is often done for logging and permissions. In particular, you may only have read only 
 permissions so you might get some new errors that say you can't run a command because you don't have permissions.
 
+If you can't Google your way out of an issue like this, see if someone on your project can help you.
+
 #### Independent practice
-Log into an instance find the ``carmen.sandiego`` file.
+Log into the AWS instance the instructor posted in Slack, and find the ``carmen.sandiego`` file.  Once you find it, raise your hand, and an instructor will check your answer.
 
 ## SCP 
 Since production servers are stripped down machines sometimes you need to transfer files. The easiest way to 
@@ -99,19 +97,13 @@ scp -i <certificate> <user>@<host>:<remote_local> <local_file(s)>
 ```
 
 #### Independent practice
-Create a directory named by your github id inside of the class directory. Inside that directory put a copy of your headshot.
+Create a directory with a name of your GitHub username. Inside that directory put a copy of your headshot. Copy this directory onto the AWS instance inside the `class` directory.
 
 ## Tail
 When you're looking at production logs you can use the ``tail`` command.
 
 #### Indpendent Practice 
-Use tail on the log file in the app folder to find a message for GA students.
-
-<!-- ## Text Editors
-
-## AWS -->
-
-
+Use tail on the log file in the `app` folder to find a message for GA students.
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
