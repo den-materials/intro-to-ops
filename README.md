@@ -32,6 +32,16 @@ Let's start with a quick hello world.  Open up your terminal and connect to my e
 
 We will tell you the password out loud rather than put it in this repo.  (Security!  Keep that in mind for the future--never put passwords in a publicly accessible place.  Bad people (and robots) are everywhere.)
 
+Type that into your terminal and...wait, did anything even change?  It sure did.  Notice that our Terminal is now logged into `Katherines-MacBook-Air`.  Poor Katherine, she's getting hacked.
+
+Enter the `Documents` directory and leave her a friendly note.  Something like, 
+
+`"Bwahahaha, I have access to your computer.  Consider yourself lucky I'm not Angelina Jolie from Hackers."`
+
+Save this note into a file like `<your_name>.txt`, then make sure your file is there.  Watch as her folder blows up with all the h4x0rs in this class.  
+
+Then `exit` to land safely back in your Terminal.
+
 Want to set this up for your computer so you can log in from other machines on your network at work or home?  [Follow these directions](https://support.apple.com/kb/PH18726?locale=en_US).  Be very careful, though.  Whenever you open access to a machine, you should remember to follow these rules:
 
 1. Have some sort of authentication.  Above, this is your username and password, but there are other methods (like the one below).
