@@ -1,25 +1,31 @@
 # Introduction to Operations 
 
 ## Why is this important
+
 Troubleshooting in production often requires you to view logs on a remote machine. You may also be asked to 
 make small "hotfixes" to a running machine to fix a critical bug.
  
 ## Objectives
+
+*By the end of this lab, developers will be able to:*
 * __Create__ an SSH key
 * __Log in__ to a remote server 
 * __Copy files__ to a remote server
 * __Review__ a file using tail
 
 ## Introduction
-Servers are just computers. Webservers are often Linux based machines and once you have access you can run 
-any of the commands you're used to on your local machine. Once an app gets into production, you often need
- to find out something about the running machine, either looking at local logs or even making small changes 
- and restarting the system.
+
+Servers are just computers. Webservers are often Linux-based machines and once you have access you can run 
+any of the commands you're used to running on your local machine. 
+
+Once an app gets into production, you often need to find out something from the machine where it's running,
+either looking at local logs or even making small changes and restarting the system.
 
 ## SSH 
-The most common way to access a webserver is to use ``ssh`` or secure shell. ssh uses the same technology as 
-SSL to enable you to access the server over an encrypted connection. Unlike SSL you need to need to do some 
-of the heavy lifting around keys.
+
+The most common way to access a webserver is to use `ssh` or secure shell. `ssh` uses the same technology as 
+SSL/HTTPS to enable you to access the server over an encrypted connection. Unlike SSL, that does a lot of work
+for you, you need to do some of the heavy lifting around keys with `ssh`.
 
 ### ssh keys
 
@@ -28,19 +34,22 @@ Let's start by creating your local ssh keys.
 ```bash
 cd ~/.ssh
 # Check for id_rsa files
-ssh-keygen -t rsa -C jbarela@generalassemb.ly
+ls
+# Create a file if it does not exist
+ssh-keygen -t rsa -C zgirouard@generalassemb.ly
 ```
 
 You can then distribute the ``id_rsa.pub`` file to other people like system administrators. The 
-adminsitrators can then add your server access. Never transfer the ``id_rsa`` to someone as this is the same 
+administrators can then give your server access. Never transfer the ``id_rsa`` to someone as this is the same 
 as handing someone a sticky note with your id and password.
 
 #### Independent practice
-Generate your private ssh key 
+
+Generate your private ssh key, with your email.  When prompted to add a passphrase, you can leave it blank.  If you want to be super-secure, and add a passphrase, just make sure you remember it!
 
 ### ssh
 
-Once your key has been transfered, you can start to log into the server the basic format is 
+Once your key has been transfered, you can log into the server. The basic format for this is: 
 
 ```bash
 ssh <user-name>@<host>
