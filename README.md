@@ -68,13 +68,24 @@ This private key is what we need to log into the server. To use the private key 
 ssh -i file.pem ec2-user@aws-host
 ```
 
-The ``-i`` tells ssh to use the file listed after as the key. One thing that you'll need to do is to make
-sure that the file is read only.
+The ``-i`` tells ssh to use the file listed after as the key.
+
+For this lesson, we will be sharing a private key, for the sake of convenience.  Usually, you would get your own private key and **never share it**.  The instructor will share the key, called `WDI_Ops_Zeb.pem`.  Put it in your `~/.ssh` folder.
+
+One thing that you'll need to do is to make sure that the key file is read only.
 
 How do you change the file so that only you read the file MyCertificate.pem?
 <details>
 ``chmod 400 MyCertificate.pem``
 </details>
+
+The `ec2-user` is, well, `ec2-user`.
+
+The `aws-host` is `ec2-35-167-168-17.us-west-2.compute.amazonaws.com`.
+
+>**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI_Ops_Zeb.pem`) in the command above.
+
+When prompted to connect, type `yes`.
 
 __ssh gotcha__
 
