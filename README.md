@@ -85,8 +85,6 @@ The `aws-host` is `ec2-35-167-168-17.us-west-2.compute.amazonaws.com`.
 
 >**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI_Ops_Zeb.pem`) in the command above.
 
-When prompted to connect, type `yes`.
-
 __ssh gotcha__
 
 ssh logs you in as a specifc user. Sometimes there's a single user for a server, sometimes you log in as 
@@ -96,36 +94,46 @@ permissions so you might get some new errors that say you can't run a command be
 If you can't Google your way out of an issue like this, see if someone on your project can help you.
 
 #### Independent practice
-Log into the AWS instance the instructor posted in Slack, and find the ``carmen.sandiego`` file.  Once you find it, raise your hand, and an instructor will check your answer.
+
+Log into the AWS instance above.  When prompted to connect, type `yes`.
+
+Find the ``carmen.sandiego`` file.  Once you find it, raise your hand, and an instructor will check your answer.
 
 ## SCP 
-Since production servers are stripped down machines sometimes you need to transfer files. The easiest way to 
-do this is to use ``scp``.
+
+Since production servers are stripped down machines, sometimes you need to transfer files to them.
+The easiest way to do this is to use ``scp``.
 
 The basic format is:
 ```bash
 scp <local_file(s)> <user>@<host>:<remote_local>
 ```
 
-For our AWS server we'll need 
+For our AWS server we'll need:
 ```bash
-scp -i <certificate> <local_file(s)> <user>@<host>:<remote_local>
+scp -i <certificate> <local_file(s)> <user>@<host>:<remote_local_path>
 ```
 
-You can also reverse the system
+You can also reverse the command to transfer files from the remote machine to your local machine:
 ```bash
-scp -i <certificate> <user>@<host>:<remote_local> <local_file(s)> 
+scp -i <certificate> <user>@<host>:<remote_local_file(s)> <local_path> 
 ```
 
 #### Independent practice
-Create a directory with a name of your GitHub username. Inside that directory put a copy of your headshot. Copy this directory onto the AWS instance inside the `class` directory.
+
+Create a directory with a name of your GitHub username. Inside that directory put a copy of your headshot. Copy this directory onto the AWS instance inside the `class` directory.  Remember how to copy a whole directory and all the items inside it?  You need the same flag to `scp` a whole directory.
+
+Once you have uploaded the directory *to AWS*, download one of your fellow developer's directories *from AWS*.
 
 ## Tail
+
 When you're looking at production logs you can use the ``tail`` command.
 
 #### Indpendent Practice 
+
 Use tail on the log file in the `app` folder to find a message for GA students.
 
 ## Licensing
+
 All content is licensed under a CC­BY­NC­SA 4.0 license.
 All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
