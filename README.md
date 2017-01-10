@@ -1,3 +1,7 @@
+<!--9:40 5 minutes -->
+
+<!--Hook: Think back to day 1.  Remember all that talk of the 7 layers of computer networking?  We talked briefly about the "Application" layer.  Long enough to mention that the "Application" layer indicates the type of data we're sending.  90% of the time as a web developer, you will be communicating with the HTTP or HTTPS type.  But we've already talked about sending Postgres traffic, Mongo traffic, and today we'll talk about a very special type of traffic--the type that lets you log in remotely to another machine...say, a web server.  -->
+
 # Introduction to Operations 
 
 ## Why is this important?
@@ -20,6 +24,8 @@ any of the commands you're used to running on your local machine.
 
 Once an app gets into production, you often need to find out something from the machine where it's running,
 either looking at local logs or even making small changes and restarting the system.
+
+<!--9:45 10 minutes -->
 
 ## SSH 
 
@@ -58,6 +64,8 @@ Once you have a public key, you can log into a machine with the same format as a
 ```bash
 ssh <user-name>@<host>
 ```
+
+<!--9:55 10 minutes -->
 
 ### ssh private keys
 
@@ -99,10 +107,14 @@ Log into the AWS instance above.  When prompted to connect, type `yes`.
 
 Find the ``carmen.sandiego`` file.  Once you find it, raise your hand, and an instructor will check your answer.
 
+<!--10:05 10 minutes -->
+
 ## SCP 
 
 Since production servers are stripped down machines, sometimes you need to transfer files to them.
 The easiest way to do this is to use ``scp``.
+
+Remember when we talked about FTP earlier when we were setting up our personal websites?  That is what `scp` uses.  We're *connecting* on so many *layers*.
 
 The basic format is:
 ```bash
@@ -125,9 +137,11 @@ Create a directory with a name of your GitHub username. Inside that directory pu
 
 Once you have uploaded the directory *to AWS*, download one of your fellow developer's directories *from AWS*.
 
+<!--10:15 5 minutes -->
+
 ## Tail
 
-When you're looking at production logs you can use the ``tail`` command.
+OK, one more exercise.  When you're looking at production logs, sometimes it's hard to tell where the problem is.  An easy way to narrow your search is to use the ``tail`` command.  `tail` allows you to see only the most recent lines of a log file, which will usually contain the most recent error.
 
 #### Indpendent Practice 
 
