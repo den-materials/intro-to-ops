@@ -1,3 +1,5 @@
+<!--Actually 9:50 -->
+
 <!--9:40 5 minutes -->
 
 <!--Hook: Think back to day 1.  Remember all that talk of the 7 layers of computer networking?  We talked briefly about the "Application" layer.  Long enough to mention that the "Application" layer indicates the type of data we're sending.  90% of the time as a web developer, you will be communicating with the HTTP or HTTPS type.  But we've already talked about sending Postgres traffic, Mongo traffic, and today we'll talk about a very special type of traffic--the type that lets you log in remotely to another machine...say, a web server.  -->
@@ -24,6 +26,8 @@ any of the commands you're used to running on your local machine.
 
 Once an app gets into production, you often need to find out something from the machine where it's running,
 either looking at local logs or even making small changes and restarting the system.
+
+<!--9:53-->
 
 <!--9:45 10 minutes -->
 
@@ -78,6 +82,8 @@ ssh -i file.pem ec2-user@aws-host
 
 The ``-i`` tells ssh to use the file listed after as the key.
 
+<!--Actually 10:06 -->
+
 For this lesson, we will be sharing a private key, for the sake of convenience.  Usually, you would get your own private key and **never share it**.  The instructor will share the key, called `WDI_Ops_Zeb.pem`.  Put it in your `~/.ssh` folder.
 
 One thing that you'll need to do is to make sure that the key file is read only.
@@ -107,6 +113,8 @@ Log into the AWS instance above.  When prompted to connect (do you trust this AW
 
 Find the ``carmen.sandiego`` file.  Once you find it, raise your hand, and an instructor will check your answer.
 
+<!--Actually 10:42, That ssh-i took FOREVER for devs to get -->
+
 <!--10:05 10 minutes -->
 
 ## SCP 
@@ -118,17 +126,17 @@ Remember when we talked about FTP earlier when we were setting up our personal w
 
 The basic format is:
 ```bash
-scp <local_file(s)> <user>@<host>:<remote_local>
+scp <local_file(s)> <user>@<host>:<remote_path>
 ```
 
 For our AWS server we'll need:
 ```bash
-scp -i <certificate> <local_file(s)> <user>@<host>:<remote_local_path>
+scp -i <certificate> <local_file(s)> <user>@<host>:<remote_path>
 ```
 
 You can also reverse the command to transfer files from the remote machine to your local machine:
 ```bash
-scp -i <certificate> <user>@<host>:<remote_local_file(s)> <local_path> 
+scp -i <certificate> <user>@<host>:<remote_path> <local_path> 
 ```
 
 #### Independent practice
