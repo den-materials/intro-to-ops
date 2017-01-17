@@ -145,6 +145,8 @@ Create a directory with a name of your GitHub username. Inside that directory pu
 
 Once you have uploaded the directory *to AWS*, download one of your fellow developer's directories *from AWS*.
 
+<!--Actually 11:10 -->
+
 <!--10:15 5 minutes -->
 
 ## Tail
@@ -154,6 +156,8 @@ OK, one more exercise.  When you're looking at production logs, sometimes it's h
 #### Indpendent Practice 
 
 Use tail on the log file in the `app` folder to find a message for GA students.
+
+<!--Actually 11:15 -->
 
 ## Licensing
 
