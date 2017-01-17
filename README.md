@@ -82,12 +82,12 @@ For this lesson, we will be sharing a private key, for the sake of convenience. 
 
 One thing that you'll need to do is to make sure that the key file is read only.
 
-How do you change the file so that only you read the file MyCertificate.pem?
+How do you change the file so that only you can read the file MyCertificate.pem?
 <details>
 ``chmod 400 MyCertificate.pem``
 </details>
 
-The `ec2-user` is, well, `ec2-user`.
+The default `ec2-user` is, well, `ec2-user`.
 
 The `aws-host` is `ec2-35-167-168-17.us-west-2.compute.amazonaws.com`.
 
@@ -96,14 +96,14 @@ The `aws-host` is `ec2-35-167-168-17.us-west-2.compute.amazonaws.com`.
 __ssh gotcha__
 
 ssh logs you in as a specifc user. Sometimes there's a single user for a server, sometimes you log in as 
-yourself. This is often done for logging and permissions. In particular, you may only have read only 
-permissions so you might get some new errors that say you can't run a command because you don't have permissions.
+yourself. This is often done for logging and permissions. In particular, you may only have read-only 
+permissions, so you might get some new errors that say you can't run a command because you don't have permissions.
 
 If you can't Google your way out of an issue like this, see if someone on your project can help you.
 
 #### Independent practice
 
-Log into the AWS instance above.  When prompted to connect, type `yes`.
+Log into the AWS instance above.  When prompted to connect (do you trust this AWS instance?), type `yes`.
 
 Find the ``carmen.sandiego`` file.  Once you find it, raise your hand, and an instructor will check your answer.
 
