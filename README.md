@@ -59,7 +59,7 @@ Want to set this up for your computer so you can log in from other machines on y
 
 ### ssh public keys
 
-When possible, it is better to not share usernames or passwords at all.  One way to avoid that is to share public SSH keys that contain neither usernames or passwords in plain text.  Remember installFest?  [We totally did that](https://help.github.com/articles/generating-an-ssh-key/) during [installFest](https://github.com/den-wdi-2/installFest/blob/master/mac-dev-tools.md).
+When possible, it is better to not share usernames or passwords at all.  One way to avoid that is to share public SSH keys that contain neither usernames or passwords in plain text.  Remember installFest?  [We totally did that](https://help.github.com/articles/generating-an-ssh-key/) during [installFest](https://github.com/den-materials/installFest/blob/master/mac-dev-tools.md).
 
 <!--Raise your hand if you realized that's what you were doing.  -->
 
@@ -95,7 +95,7 @@ How do you change the file so that only you can read the file MyCertificate.pem?
 
 The default `ec2-user` is, well, `ec2-user`.
 
-The `aws-host` is `ec2-35-167-168-17.us-west-2.compute.amazonaws.com`.
+The `aws-host` is `ec2-35-163-111-237.us-west-2.compute.amazonaws.com`.
 
 >**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI_Ops_Zeb.pem`) in the command above.
 
@@ -141,7 +141,7 @@ scp -i <certificate> <user>@<host>:<remote_path> <local_path>
 
 #### Independent practice
 
-Create a directory with a name of your GitHub username. Inside that directory put a copy of your headshot. Copy this directory onto the AWS instance inside the `class` directory.  Remember how to copy a whole directory and all the items inside it?  You need the same flag to `scp` a whole directory.
+Create a directory with a name of your GitHub username. Inside that directory put a picture of yourself. Copy this directory onto the AWS instance inside the `class` directory.  Remember how to copy a whole directory and all the items inside it?  You need the same flag to `scp` a whole directory.
 
 Once you have uploaded the directory *to AWS*, download one of your fellow developer's directories *from AWS*.
 
