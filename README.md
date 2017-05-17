@@ -16,7 +16,7 @@ make small "hotfixes" to a running machine to fix a critical bug.
 ## Objectives
 
 *By the end of this lab, developers will be able to:*
-* __Create__ an SSH key
+* __Utilizee__ an SSH key
 * __Log in__ to a remote server 
 * __Copy files__ to a remote server
 * __Review__ a file using tail
