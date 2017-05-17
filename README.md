@@ -4,6 +4,8 @@
 
 <!--Hook: Think back to day 1.  Remember all that talk of the 7 layers of computer networking?  We talked briefly about the "Application" layer.  Long enough to mention that the "Application" layer indicates the type of data we're sending.  90% of the time as a web developer, you will be communicating with the HTTP or HTTPS type.  But we've already talked about sending Postgres traffic, Mongo traffic, and today we'll talk about a very special type of traffic--the type that lets you log in remotely to another machine...say, a web server.  -->
 
+<!--Stress throughout this class to Read, Search, Ask...especially Read.  These directions are written approximately as clearly as new documentation.  Devs will need to put all the pieces of the puzzle together themselves without any external explanation. -->
+
 # Introduction to Operations 
 
 ## Why is this important?
@@ -38,7 +40,9 @@ SSL/HTTPS to enable you to access the server over an encrypted connection.
 
 Let's start with a quick hello world.  Open up your terminal and connect to my extra laptop with:
 
-`ssh wdi-devs@10.62.106.23`
+`ssh wdi-devs@10.62.104.171`
+
+This command will ask if you want to continue connecting.  Yup, we do.  It's hackin' time.
 
 We will tell you the password out loud rather than put it in this repo.  (Security!  Keep that in mind for the future--never put passwords in a publicly accessible place.  Bad people (and robots) are everywhere.)
 
@@ -84,7 +88,7 @@ The ``-i`` tells ssh to use the file listed after as the key.
 
 <!--Actually 10:06 -->
 
-For this lesson, we will be sharing a private key, for the sake of convenience.  Usually, you would get your own private key and **never share it**.  The instructor will share the key, called `WDI_Ops_Zeb.pem`.  Put it in your `~/.ssh` folder.
+For this lesson, we will be sharing a private key, for the sake of convenience.  Usually, you would get your own private key and **never share it**.  The instructor will share the key, called `WDI4_Ops_Zeb.pem`.  Put it in your `~/.ssh` folder.
 
 One thing that you'll need to do is to make sure that the key file is read only.
 
@@ -97,7 +101,7 @@ The default `ec2-user` is, well, `ec2-user`.
 
 The `aws-host` is `ec2-35-163-111-237.us-west-2.compute.amazonaws.com`.
 
->**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI_Ops_Zeb.pem`) in the command above.
+>**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI4_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI4_Ops_Zeb.pem`) in the command above.
 
 __ssh gotcha__
 
