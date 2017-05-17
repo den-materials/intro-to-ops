@@ -1,5 +1,6 @@
-<!--Actually 9:50 -->
+<!--Actually 9:50 WDI2-->
 
+<!--9:40 WDI3 -->
 <!--9:40 5 minutes -->
 
 <!--Hook: Think back to day 1.  Remember all that talk of the 7 layers of computer networking?  We talked briefly about the "Application" layer.  Long enough to mention that the "Application" layer indicates the type of data we're sending.  90% of the time as a web developer, you will be communicating with the HTTP or HTTPS type.  But we've already talked about sending Postgres traffic, Mongo traffic, and today we'll talk about a very special type of traffic--the type that lets you log in remotely to another machine...say, a web server.  -->
@@ -31,6 +32,7 @@ either looking at local logs or even making small changes and restarting the sys
 
 <!--9:53-->
 
+<!--9:44 WDI3 -->
 <!--9:45 10 minutes -->
 
 ## SSH 
@@ -55,6 +57,8 @@ Enter the `Documents` directory and leave her a friendly note.  Something like,
 Save this note into a file like `<your_name>.txt`, then make sure your file is there.  Watch as her folder blows up with all the h4x0rs in this class.  
 
 Then `exit` to land safely back in your Terminal.
+
+<!--9:54 WDI3 -->
 
 Want to set this up for your computer so you can log in from other machines on your network at work or home?  [Follow these directions](https://support.apple.com/kb/PH18726?locale=en_US).  Be very careful, though.  Whenever you open access to a machine, you should remember to follow these rules:
 
@@ -86,7 +90,8 @@ ssh -i file.pem ec2-user@aws-host
 
 The ``-i`` tells ssh to use the file listed after as the key.
 
-<!--Actually 10:06 -->
+<!--WDI3 10:03 when turning over to devs -->
+<!--Actually 10:06 WDI2-->
 
 For this lesson, we will be sharing a private key, for the sake of convenience.  Usually, you would get your own private key and **never share it**.  The instructor will share the key, called `WDI4_Ops_Zeb.pem`.  Put it in your `~/.ssh` folder.
 
@@ -118,6 +123,7 @@ Log into the AWS instance above.  When prompted to connect (do you trust this AW
 Find the ``carmen.sandiego`` file.  Once you find it, raise your hand, and an instructor will check your answer.
 
 <!--Actually 10:42, That ssh-i took FOREVER for devs to get -->
+<!--10:35 WDI3 -->
 
 <!--10:05 10 minutes -->
 
@@ -143,13 +149,16 @@ You can also reverse the command to transfer files from the remote machine to yo
 scp -i <certificate> <user>@<host>:<remote_path> <local_path> 
 ```
 
+<!--10:43 turning over to devs -->
+
 #### Independent practice
 
 Create a directory with a name of your GitHub username. Inside that directory put a picture of yourself. Copy this directory onto the AWS instance inside the `class` directory.  Remember how to copy a whole directory and all the items inside it?  You need the same flag to `scp` a whole directory.
 
 Once you have uploaded the directory *to AWS*, download one of your fellow developer's directories *from AWS*.
 
-<!--Actually 11:10 -->
+<!--Actually 11:10 WDI2-->
+<!--WDI3 10:57 -->
 
 <!--10:15 5 minutes -->
 
@@ -161,6 +170,7 @@ OK, one more exercise.  When you're looking at production logs, sometimes it's h
 
 Use tail on the log file in the `app` folder to find a message for GA students.
 
+<!--11:05 WDI3 after all scps unblocked -->
 <!--Actually 11:15 -->
 
 ## Licensing
