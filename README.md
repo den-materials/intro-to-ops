@@ -42,7 +42,7 @@ SSL/HTTPS to enable you to access the server over an encrypted connection.
 
 Let's start with a quick hello world.  Open up your terminal and connect to my extra laptop with:
 
-`ssh wdi-devs@10.62.104.171`
+`ssh wdi-devs@10.62.105.21`
 
 This command will ask if you want to continue connecting.  Yup, we do.  It's hackin' time.
 
@@ -85,7 +85,7 @@ For AWS, we'll use something slightly different. AWS adds its own private key wh
 This private key is what we need to log into the server. To use the private key we'll need a slighlty different form:
 
 ```bash
-ssh -i file.pem ec2-user@aws-host
+ssh -i <file.pem> <ec2-user>@<aws-host>
 ```
 
 The ``-i`` tells ssh to use the file listed after as the key.
@@ -104,7 +104,7 @@ How do you change the file so that only you can read the file MyCertificate.pem?
 
 The default `ec2-user` is, well, `ec2-user`.
 
-The `aws-host` is `ec2-35-163-111-237.us-west-2.compute.amazonaws.com`.
+The `aws-host` is `ec2-34-208-195-77.us-west-2.compute.amazonaws.com`.
 
 >**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI4_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI4_Ops_Zeb.pem`) in the command above.
 
