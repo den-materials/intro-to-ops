@@ -1,5 +1,6 @@
 <!--Actually 9:50 WDI2-->
 
+<!--WDI4 11:25 -->
 <!--9:40 WDI3 -->
 <!--9:40 5 minutes -->
 
@@ -32,6 +33,7 @@ either looking at local logs or even making small changes and restarting the sys
 
 <!--9:53-->
 
+<!--11:30 WDI4 -->
 <!--9:44 WDI3 -->
 <!--9:45 10 minutes -->
 
@@ -64,6 +66,8 @@ Want to set this up for your computer so you can log in from other machines on y
 
 1. Have some sort of authentication.  Above, this is your username and password, but there are other methods (like the one below).
 2. Be sure that all the people who could *potentially* reach your computer are trusted.  In the example above, we are trusting all the people on our WeWork network, but the more restricted you can be to specific addresses or networks, the better.
+
+<!--WDI4 coming back 11:40 -->
 
 ### ssh public keys
 
@@ -108,6 +112,8 @@ The `aws-host` is `ec2-34-208-195-77.us-west-2.compute.amazonaws.com`.
 
 >**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI4_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI4_Ops_Zeb.pem`) in the command above.
 
+<!--WDI4 coming back 11:56-->
+
 __ssh gotcha__
 
 ssh logs you in as a specifc user. Sometimes there's a single user for a server, sometimes you log in as 
@@ -120,10 +126,11 @@ If you can't Google your way out of an issue like this, see if someone on your p
 
 Log into the AWS instance above.  When prompted to connect (do you trust this AWS instance?), type `yes`.
 
-Find the ``carmen.sandiego`` file.  Once you find it, raise your hand, and an instructor will check your answer.
+Find the `carmen.sandiego` file.  Once you find it, raise your hand, and an instructor will check your answer.
 
 <!--Actually 10:42, That ssh-i took FOREVER for devs to get -->
 <!--10:35 WDI3 -->
+<!--WDI4 coming back 12:11-->
 
 <!--10:05 10 minutes -->
 
@@ -160,6 +167,8 @@ Once you have uploaded the directory *to AWS*, download one of your fellow devel
 <!--Actually 11:10 WDI2-->
 <!--WDI3 10:57 -->
 
+<!--WDI4 coming back 12:2 -->
+
 <!--10:15 5 minutes -->
 
 ## Tail
@@ -172,6 +181,7 @@ Use tail on the log file in the `app` folder to find a message for GA students.
 
 <!--11:05 WDI3 after all scps unblocked -->
 <!--Actually 11:15 -->
+<!--WDI4 ended 12:31, but needed to just show tail womp womp -->
 
 ## Licensing
 
