@@ -99,7 +99,7 @@ One thing that you'll need to do is to make sure that the key file is read only.
 
 How do you change the file so that only you can read the file MyCertificate.pem?
 <details>
-``chmod 400 MyCertificate.pem``
+ <p>`chmod 400 MyCertificate.pem`</p>
 </details>
 
 The default `ec2-user` is, well, `ec2-user`.
