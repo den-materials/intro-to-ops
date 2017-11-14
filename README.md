@@ -97,7 +97,7 @@ The ``-i`` tells ssh to use the file listed after as the key.
 <!--WDI3 10:03 when turning over to devs -->
 <!--Actually 10:06 WDI2-->
 
-For this lesson, we will be sharing a private key, for the sake of convenience.  Usually, you would get your own private key and **never share it**.  The instructor will share the key, called `WDI4_Ops_Zeb.pem`.  Put it in your `~/.ssh` folder.
+For this lesson, we will be sharing a private key, for the sake of convenience.  Usually, you would get your own private key and **never share it**.  The instructor will share the key, called `WDI5_Ops_Zeb.pem`.  Put it in your `~/.ssh` folder.
 
 One thing that you'll need to do is to make sure that the key file is read only.
 
@@ -108,9 +108,9 @@ How do you change the file so that only you can read the file MyCertificate.pem?
 
 The default `ec2-user` is, well, `ec2-user`.
 
-The `aws-host` is `ec2-34-208-195-77.us-west-2.compute.amazonaws.com`.
+The `aws-host` is `ec2-54-70-156-234.us-west-2.compute.amazonaws.com`.
 
->**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI4_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI4_Ops_Zeb.pem`) in the command above.
+>**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI5_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI5_Ops_Zeb.pem`) in the command above.
 
 <!--WDI4 coming back 11:56-->
 
