@@ -1,5 +1,6 @@
 <!--Actually 9:50 WDI2-->
 
+<!--WDI5 11:10 -->
 <!--WDI4 11:25 -->
 <!--9:40 WDI3 -->
 <!--9:40 5 minutes -->
@@ -44,7 +45,7 @@ SSL/HTTPS to enable you to access the server over an encrypted connection.
 
 Let's start with a quick hello world.  Open up your terminal and connect to my extra laptop with:
 
-`ssh wdi-devs@10.252.198.208`
+`ssh wdi-devs@10.0.2.13`
 
 This command will ask if you want to continue connecting.  Yup, we do.  It's hackin' time.
 
