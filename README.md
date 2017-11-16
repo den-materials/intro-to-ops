@@ -61,12 +61,13 @@ Save this note into a file like `<your_name>.txt`, then make sure your file is t
 
 Then `exit` to land safely back in your Terminal.
 
+<!--WDI5 11:28 -->
 <!--9:54 WDI3 -->
 
 Want to set this up for your computer so you can log in from other machines on your network at work or home?  [Follow these directions](https://support.apple.com/kb/PH18726?locale=en_US).  Be very careful, though.  Whenever you open access to a machine, you should remember to follow these rules:
 
 1. Have some sort of authentication.  Above, this is your username and password, but there are other methods (like the one below).
-2. Be sure that all the people who could *potentially* reach your computer are trusted.  In the example above, we are trusting all the people on our WeWork network, but the more restricted you can be to specific addresses or networks, the better.
+2. Be sure that all the people who could *potentially* reach your computer are trusted.  In the example above, we are trusting all the people on our Industry network, but the more restricted you can be to specific addresses or networks, the better.
 
 <!--WDI4 coming back 11:40 -->
 
@@ -113,6 +114,7 @@ The `aws-host` is `ec2-54-70-156-234.us-west-2.compute.amazonaws.com`.
 
 >**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI5_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI5_Ops_Zeb.pem`) in the command above.
 
+<!--WDI5 coming back 11:59  -->
 <!--WDI4 coming back 11:56-->
 
 __ssh gotcha__
@@ -168,7 +170,9 @@ Once you have uploaded the directory *to AWS*, download one of your fellow devel
 <!--Actually 11:10 WDI2-->
 <!--WDI3 10:57 -->
 
-<!--WDI4 coming back 12:2 -->
+<!--WDI5 turning over to devs 12:10 -->
+<!--WDI5 coming back 12:20 -->
+<!--WDI4 coming back 12:27 -->
 
 <!--10:15 5 minutes -->
 
@@ -183,6 +187,7 @@ Use tail on the log file in the `app` folder to find a message for GA students.
 <!--11:05 WDI3 after all scps unblocked -->
 <!--Actually 11:15 -->
 <!--WDI4 ended 12:31, but needed to just show tail womp womp -->
+<!--WDI5 12:34, took time to explain computer networks -->
 
 ## Licensing
 
