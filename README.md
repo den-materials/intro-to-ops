@@ -45,7 +45,7 @@ SSL/HTTPS to enable you to access the server over an encrypted connection.
 
 Let's start with a quick hello world.  Open up your terminal and connect to my extra laptop with:
 
-`ssh wdi-devs@10.0.2.13`
+`ssh wdi-devs@100.90.1.110`
 
 This command will ask if you want to continue connecting.  Yup, we do.  It's hackin' time.
 
@@ -110,7 +110,7 @@ How do you change the file so that only you can read the file MyCertificate.pem?
 
 The default `ec2-user` is, well, `ec2-user`.
 
-The `aws-host` is `ec2-54-70-156-234.us-west-2.compute.amazonaws.com`.
+The `aws-host` is `ec2-54-213-246-251.us-west-2.compute.amazonaws.com`.
 
 >**Note:** Like all files in your Terminal, you need to use either absolute path (`~/.ssh/WDI5_Ops_Zeb.pem`) or relative path (move to `~/.ssh` and use `WDI5_Ops_Zeb.pem`) in the command above.
 
