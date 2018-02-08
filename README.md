@@ -45,7 +45,7 @@ SSL/HTTPS to enable you to access the server over an encrypted connection.
 
 Let's start with a quick hello world.  Open up your terminal and connect to my extra laptop with:
 
-`ssh wdi-devs@100.90.1.110`
+`ssh wdi-devs@100.70.16.147`
 
 This command will ask if you want to continue connecting.  Yup, we do.  It's hackin' time.
 
