@@ -1,5 +1,6 @@
 <!--Actually 9:50 WDI2-->
 
+<!--WDI6 11:08 -->
 <!--WDI5 11:10 -->
 <!--WDI4 11:25 -->
 <!--9:40 WDI3 -->
@@ -61,6 +62,7 @@ Save this note into a file like `<your_name>.txt`, then make sure your file is t
 
 Then `exit` to land safely back in your Terminal.
 
+<!--WDI6 11:29 -->
 <!--WDI5 11:28 -->
 <!--9:54 WDI3 -->
 
@@ -83,6 +85,7 @@ Once you have a public key, you can log into a machine with the same format as a
 ssh <user-name>@<host>
 ```
 
+<!--WDI6 11:34 -->
 <!--9:55 10 minutes -->
 
 ### ssh private keys
@@ -131,6 +134,7 @@ Log into the AWS instance above.  When prompted to connect (do you trust this AW
 
 Find the `carmen.sandiego` file.  Once you find it, raise your hand, and an instructor will check your answer.
 
+<!--WDI6 coming back 12:00  -->
 <!--Actually 10:42, That ssh-i took FOREVER for devs to get -->
 <!--10:35 WDI3 -->
 <!--WDI4 coming back 12:11-->
@@ -175,6 +179,7 @@ Once you have uploaded the directory *to AWS*, download one of your fellow devel
 <!--WDI4 coming back 12:27 -->
 
 <!--10:15 5 minutes -->
+<!--WDI6 12:29 but just said tail stuff-->
 
 ## Tail
 
